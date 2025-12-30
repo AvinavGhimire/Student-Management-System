@@ -1,11 +1,19 @@
 public class Marks {
+
     private int marksId;
     private int studentId;
     private int courseId;
     private double marks;
     private String grade;
 
+    // Constructors
     public Marks() {}
+
+    public Marks(int studentId, int courseId, double marks) {
+        this.studentId = studentId;
+        this.courseId = courseId;
+        this.marks = marks;
+    }
 
     public Marks(int marksId, int studentId, int courseId, double marks, String grade) {
         this.marksId = marksId;
@@ -15,29 +23,44 @@ public class Marks {
         this.grade = grade;
     }
 
-    public int getMarksId() { return marksId; }
-    public void setMarksId(int marksId) { this.marksId = marksId; }
+    // Getters & Setters
+    public int getMarksId() {
+        return marksId;
+    }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public void setMarksId(int marksId) {
+        this.marksId = marksId;
+    }
 
-    public int getCourseId() { return courseId; }
-    public void setCourseId(int courseId) { this.courseId = courseId; }
+    public int getStudentId() {
+        return studentId;
+    }
 
-    public double getMarks() { return marks; }
-    public void setMarks(double marks) { this.marks = marks; }
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
-    public String getGrade() { return grade; }
-    public void setGrade(String grade) { this.grade = grade; }
+    public int getCourseId() {
+        return courseId;
+    }
 
-    @Override
-    public String toString() {
-        return "Marks{" +
-                "marksId=" + marksId +
-                ", studentId=" + studentId +
-                ", courseId=" + courseId +
-                ", marks=" + marks +
-                ", grade='" + grade + '\'' +
-                '}';
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    public void setMarks(double marks) {
+        this.marks = marks;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 }
